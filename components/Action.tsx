@@ -18,7 +18,10 @@ const Action = async () => {
       )}
       {!!user && (
         <div className="flex flex-row justify-between items-center">
-          <Link href={`/users/${user.username}`} className="p-4">
+          <Link
+            href={`/users/${user.username}`}
+            className="p-4 flex items-center"
+          >
             <Clapperboard />
             <p>Dashboard</p>
           </Link>

@@ -1,4 +1,7 @@
+import Container from "@/components/Container";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
+
 import React from "react";
 
 const BrowseLayout = ({ children }: { children: React.ReactNode }) => {
@@ -6,7 +9,10 @@ const BrowseLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <div className="flex flex-col">
         <Navbar />
-        <div className="pt-20">{children}</div>
+        <div className="pt-20 flex h-screen">
+          <Sidebar />
+          <Container>{children}</Container>
+        </div>
       </div>
     </>
   );
