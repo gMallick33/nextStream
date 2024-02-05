@@ -11,7 +11,7 @@ const Toggle = () => {
   return (
     <>
       {!collapsed && (
-        <div className="flex justify-between items-center w-full ">
+        <div className="max-sm:hidden flex justify-between items-center w-full">
           <p className="p-4 text-base font-semibold max-sm:hidden">For You</p>
           <Button variant="ghost" className="ml-auto" onClick={onCollapse}>
             <ArrowLeftFromLine height={10} width={10} />
@@ -19,7 +19,7 @@ const Toggle = () => {
         </div>
       )}
       {collapsed && (
-        <div className=" hidden lg:flex justify-between items-center w-full">
+        <div className="max-sm:hidden flex items-center w-full">
           <Button variant="ghost" className="ml-auto" onClick={onExpand}>
             <ArrowRightFromLine height={10} width={10} />
           </Button>
