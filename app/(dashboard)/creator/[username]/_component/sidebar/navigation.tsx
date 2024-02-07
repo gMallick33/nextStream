@@ -13,22 +13,22 @@ export const Navigation = () => {
   const routes = [
     {
       label: "Stream",
-      href: `/u/${user?.username}`,
+      href: `/creator/${user?.username}`,
       icon: Fullscreen,
     },
     {
       label: "Keys",
-      href: `/u/${user?.username}/keys`,
+      href: `/creator/${user?.username}/keys`,
       icon: KeyRound,
     },
     {
       label: "Chat",
-      href: `/u/${user?.username}/chat`,
+      href: `/creator/${user?.username}/chat`,
       icon: MessageSquare,
     },
     {
       label: "Community",
-      href: `/u/${user?.username}/community`,
+      href: `/creator/${user?.username}/community`,
       icon: Users,
     },
   ];
