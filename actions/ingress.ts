@@ -28,8 +28,6 @@ export const resetIngresses = async (hostIdentity: string) => {
     roomName: hostIdentity,
   });
 
-  console.log(ingresses);
-
   const rooms = await roomService.listRooms([hostIdentity]);
 
   for (const room of rooms) {
