@@ -1,4 +1,4 @@
-import StreamPlayer from "@/components/StreamPlayer";
+import StreamPlayer from "@/components/stream-player/StreamPlayer";
 import { getUserByUsername } from "@/lib/user-service";
 import { currentUser } from "@clerk/nextjs";
 import React from "react";
