@@ -12,7 +12,6 @@ export const getRecommended = async () => {
   }
 
   let users = [];
-  console.log(userId);
   if (userId) {
     users = await db.user.findMany({
       where: {
