@@ -22,7 +22,7 @@ const Recommended = ({ data }: RecommendedProps) => {
       )}
       <ul className="ml-4">
         {data.map((user: any) => (
-          <div className="text-sm text-blue-300 max-sm:hidden" key={user.id}>
+          <div className="text-sm text-blue-300" key={user.id}>
             <UserItem
               key={user.id}
               username={user.username}

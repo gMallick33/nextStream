@@ -13,12 +13,30 @@ import Header from "./Header";
 import InfoCard from "./InfoCard";
 import AboutCard from "./AboutCard";
 
+type CustomStream = {
+  id: string;
+  isChatEnabled: boolean;
+  isChatDelayed: boolean;
+  isChatFollowersOnly: boolean;
+  isLive: boolean;
+  thumbnailUrl: string | null;
+  name: string;
+};
+
+type CustomUser = {
+  id: string;
+  username: string;
+  bio: string | null;
+  stream: CustomStream | null;
+  imageUrl: string;
+  _count: { followedBy: number };
+};
+
 interface StreamPlayerProps {
-  user: User & { stream: Stream | null; _count: { followedby: number } };
-  stream: Stream;
+  user: CustomUser;
+  stream: CustomStream;
   isFollowing: boolean;
 }
-
 const StreamPlayer = ({ user, stream, isFollowing }: StreamPlayerProps) => {
   const { collapsed } = useChatSidebar((state) => state);
 
@@ -63,7 +81,7 @@ const StreamPlayer = ({ user, stream, isFollowing }: StreamPlayerProps) => {
             hostIdentity={user.id}
             viewerIdentity={identity}
             bio={user.bio}
-            followedByCount={user?._count?.followedby}
+            followedByCount={user?._count?.followedBy}
           />
         </div>
         <div className={cn("col-span-1", collapsed && "hidden")}>
