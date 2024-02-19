@@ -84,7 +84,12 @@ const StreamPlayer = ({ user, stream, isFollowing }: StreamPlayerProps) => {
             followedByCount={user?._count?.followedBy}
           />
         </div>
-        <div className={cn("col-span-1", collapsed && "hidden")}>
+        <div
+          className={cn(
+            "col-span-1 absolute right-0 bottom-0",
+            collapsed && "hidden"
+          )}
+        >
           <Chat
             viewerName={name}
             hostName={user.username}
