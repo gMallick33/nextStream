@@ -1,26 +1,25 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Logo = () => {
   return (
-    <div className="flex">
-      <div className="flex items-center justify-center p-1 rounded-lg bg-slate-950">
-        <Link
-          href="/"
-          className="flex items-center hover:opacity-50 transition"
-        >
+    <Link href="/">
+      <div className="flex items-center gap-x-4 hover:opacity-75 transition">
+        <div className="bg-white rounded-full p-1 mr-12 shrink-0 lg:mr-0 lg:shrink">
           <Image
             src="/next_stream_logo.svg"
-            height={50}
-            width={50}
-            alt="logo"
+            alt="Next-Stream"
+            height="32"
+            width="32"
           />
-          <p className="text-red-500 text-xl pl-2 max-sm:hidden">Next-</p>
-          <p className="max-sm:hidden">Stream</p>
-        </Link>
+        </div>
+        <div className="hidden lg:block">
+          <p className="text-lg font-semibold">NextStream</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
