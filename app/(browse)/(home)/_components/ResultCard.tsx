@@ -17,7 +17,7 @@ const ResultCard = ({ data }: ResultCardProps) => {
           isLive={data.isLive}
           username={data.user.username}
         />
-        {data.isLive && <div>Live</div>}
+        {data.isLive && <div className="text-red-900">Live</div>}
         <div className="flex flex-col text-sm overflow-hidden">
           <p className="truncate font-semibold hover:text-blue-500">
             {data.name}

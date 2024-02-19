@@ -7,7 +7,9 @@ const Results = async () => {
 
   return (
     <div>
-      <h2>Streams we think you will like</h2>
+      <h2 className="text-red-900 font-bold mb-4 text-xl">
+        Streams we think you will like ...
+      </h2>
       {data.length === 0 && (
         <div className="text-muted-foreground text-sm">No streams found</div>
       )}
