@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to DevOverflow
 
-## Getting Started
+This is a web application for streaming inspired from the popular streaming application "Twitch"
 
-First, run the development server:
+1. Stream
+2. Chat with the participants
+3. Follow users
+4. Block users
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- clone the project on your local.
+- Execute `npm install` from the root directory
+- create `.env` file in the root directory and add the following environment variables.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=`Generate it from Clerk`
+- CLERK_SECRET_KEY=`Generate it from Clerk`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+- NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+- NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+- NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+- CLERK_WEBHOOK_SECRET=`Follow the docs of clerk webhook to get the secret`
 
-## Learn More
+- DATABASE_URL=`generate at planetscale-mysql after creating a database`
 
-To learn more about Next.js, take a look at the following resources:
+- LIVEKIT_API_URL=`Follow Livekit docs`
+- LIVEKIT_API_KEY=`Follow Livekit docs`
+- LIVEKIT_API_SECRET=`Follow Livekit docs`
+- NEXT_PUBLIC_LIVEKIT_WS_URL=`Follow Livekit docs`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- UPLOADTHING_SECRET=`Follow uploadthing docs`
+- UPLOADTHING_APP_ID=`Follow uploadthing docs`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### References to get the environment variables -
 
-## Deploy on Vercel
+- Get `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` from `https://dashboard.clerk.com/` after adding application (which is just checking the boxes on google authentication and username)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- For `NEXT_CLERK_WEBHOOK_SECRET` follow the docs at `https://clerk.com/docs/integrations/webhooks`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Run Project
+
+- Go to root directory and execute `npm run dev` which should run the app on `http://localhost:3000`
+
+## Live website -
+
+- [nextStream](https://next-stream-eight.vercel.app/)
+
+### TODO -
+
+- Unblock is work in progress.
