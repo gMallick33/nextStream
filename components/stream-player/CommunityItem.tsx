@@ -44,7 +44,7 @@ const CommunityItem = ({
         isPending && "opacity-50 pointer-events-none"
       )}
     >
-      <p style={{ color: color }}>{participantName}</p>
+      <p>{participantName}</p>
       {isHost && !isSelf && (
         <Hint label="Block">
           <Button

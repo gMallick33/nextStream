@@ -30,7 +30,8 @@ export const onBlock = async (id: string) => {
     // This means user is not in the room
   }
 
-  revalidatePath(`/creator/${self?.username}/community`);
+  // revalidatePath(`/creator/${self?.username}/community`);
+  revalidatePath(`/users/${self?.username}`);
 
   return blockedUser;
 };

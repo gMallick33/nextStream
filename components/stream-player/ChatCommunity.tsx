@@ -42,7 +42,7 @@ const ChatCommunity = ({
     });
   }, [participants, debouncedValue]);
 
-  if (!isHidden) {
+  if (isHidden) {
     return (
       <div className="flex flex-1 items-center justify-center">
         <p className="text-sm text-muted-foreground">Community is disabled</p>
